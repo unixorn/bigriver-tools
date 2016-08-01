@@ -1,0 +1,121 @@
+#!/usr/bin/env ruby
+#
+# Bake an ISO on a slave
+#
+# Copyright 2016, Daqri
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+require 'rubygems'
+require 'fog/aws'
+require 'logger'
+require 'pp'
+require 'trollop'
+
+
+def setup_logging(name: 'unnamed', loglevel: 'debug')
+  logger = Logger.new(STDOUT)
+  case loglevel.upcase
+  when 'DEBUG'
+    logger.level = Logger::DEBUG
+  when 'ERROR'
+    logger.level = Logger::ERROR
+  when 'FATAL'
+    logger.level = Logger::FATAL
+  when 'INFO'
+    logger.level = Logger::INFO
+  when 'WARN'
+    logger.level = Logger::WARN
+  end
+  logger.progname = name
+  logger.formatter = proc do |severity, datetime, progname, msg|
+    date_format = datetime.strftime("%Y-%m-%d %H:%M:%S")
+    if severity == "INFO" or severity == "WARN"
+      "[#{date_format}] #{severity}  (#{progname}): #{msg}\n"
+    else
+      "[#{date_format}] #{severity} (#{progname}): #{msg}\n"
+    end
+  end
+
+  return logger
+end
+
+
+# Add a few fog helpers
+
+def instanceState?(connection:, instanceId:)
+  connection.describe_instances('instance-id' =>[instanceId])[:body]['reservationSet'][0]['instancesSet'][0]['instanceState']['name']
+end
+
+
+def parseCLI
+  opts = Trollop::options do
+    version "ec2-instance-state 0.1.1 (c) 2016 DAQRI, LLC."
+    banner <<-EOS
+  ec2-instance-state
+
+  Usage:
+
+    ec2-instance-state [options]
+
+  where [options] are:
+
+  EOS
+
+    opt :debug, "Set debug level", :default => 0
+    opt :instance_id, "Instance ID to check", :type => String
+    opt :log_level, "Set log level", :type => String, :default => "INFO"
+    opt :region, "AWS Region", :type => String, :default => "us-west-2"
+    opt :aws_access_key_id, "AWS SECRET ACCESS KEY", :type => String
+    opt :aws_secret_access_key, "AWS SECRET ACCESS KEY", :type => String
+  end
+
+  # Sanity check our arguments
+  validLogLevels = ['DEBUG', 'ERROR', 'FATAL', 'INFO', 'WARN']
+  Trollop::die :log_level, "#{opts[:log_level]} must be in #{validLogLevels}" unless validLogLevels.include?(opts[:log_level].upcase)
+
+  $logger = setup_logging(name: 'ec2-instance-state', loglevel: opts[:log_level])
+
+  Trollop::die :instance_id, "You must specify an instance ID" unless opts[:instance_id]
+
+  if not opts[:aws_secret_access_key]
+    if ENV.has_key?('AWS_SECRET_ACCESS_KEY')
+      opts[:aws_secret_access_key] = ENV['AWS_SECRET_ACCESS_KEY']
+    else
+      Trollop::die :aws_secret_access_key, "You must either set AWS_SECRET_ACCESS_KEY in the environment or use the command line argument" unless opts[:aws_secret_access_key]
+    end
+  end
+
+  if not opts[:aws_access_key_id]
+    if ENV.has_key?('AWS_ACCESS_KEY_ID')
+      opts[:aws_access_key_id] = ENV['AWS_ACCESS_KEY_ID']
+    else
+      Trollop::die :aws_access_key_id, "You must either set AWS_ACCESS_KEY_ID in the environment or use the command line argument" unless opts[:aws_access_key_id]
+    end
+  end
+
+  return opts
+end
+
+
+def main
+  $opts = parseCLI()
+
+  ec2 = Fog::Compute.new :provider => 'AWS',
+    :region => $opts[:region],
+    :aws_secret_access_key => $opts[:aws_secret_access_key],
+    :aws_access_key_id => $opts[:aws_access_key_id]
+  puts instanceState?(connection: ec2, instanceId: $opts[:instance_id])
+end
+
+main
