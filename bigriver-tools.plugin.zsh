@@ -21,3 +21,37 @@
 
 PLUGIN_BIN="$(dirname $0)/bin"
 export PATH=${PATH}:${PLUGIN_BIN}
+
+# This function is from James Carr on the HangOps slack
+function aws-instances-describe() {
+  zparseopts -D -E -A opts -- o: t: s: f:
+  output=${opts[-o]:-"table"}
+  tag_name=${opts[-t]:-"Name"}
+  state=${opts[-s]:-"running"}
+  filter_name=${opts[-f]:-"tag:${tag_name}"}
+
+  if [ $filter_name = "tag:${tag_name}" ]; then
+    name="*${1}*"
+  else
+    name=${1}
+  fi
+
+  query=(
+    "Reservations[].Instances[]"
+    ".{"
+    "VpcId            : VpcId,"
+    "Name             : Tags[?Key == \`Name\`].Value | [0],"
+    "State            : State.Name,"
+    "LaunchTime       : LaunchTime,"
+    "InstanceId       : InstanceId,"
+    "PrivateIpAddress : PrivateIpAddress,"
+    "ImageId          : ImageId,"
+    "InstanceType     : InstanceType"
+    "}"
+  )
+
+  aws --output ${output} \
+      ec2 describe-instances \
+      --filters "Name=${filter_name},Values=${name}" "Name=instance-state-name,Values=${state}" \
+      --query "${query}"
+}
