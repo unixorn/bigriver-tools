@@ -8,3 +8,4 @@ Some scripts for dealing with AWS
 
 # Other Resources
 * [vancluever/aws-runas](https://github.com/vancluever/aws-runas) - Run commands or shell under an AWS IAM role
+* [aws-keychain](https://github.com/pda/aws-keychain) - macOS-only - allows you to store your IAM keypair in the OS X keychain so it never ends up stored on disk unencrypted
