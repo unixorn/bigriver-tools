@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 #
-# Bake an ISO on a slave
+# Get the state of a given instance-id in EC2
 #
 # Copyright 2016, Daqri
 #
