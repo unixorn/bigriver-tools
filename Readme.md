@@ -8,6 +8,7 @@ Some scripts for dealing with AWS
 
 # Other Resources
 * [aws-keychain](https://github.com/pda/aws-keychain) - macOS-only - allows you to store your IAM keypair in the OS X keychain so it never ends up stored on disk unencrypted
+* [cli53](https://github.com/barnybug/cli53) - Command line tool for Amazon's Route 53
 * [vancluever/aws-runas](https://github.com/vancluever/aws-runas) - Run commands or shell under an AWS IAM role
 
 # Status
