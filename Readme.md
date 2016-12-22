@@ -8,6 +8,7 @@ Some scripts for dealing with AWS
 
 # Other Resources
 
+* [apex-shell](https://github.com/apex/apex-shell) - Interactive shell for executing commands in AWS Lambda containers.
 * [aws-keychain](https://github.com/pda/aws-keychain) - macOS-only - allows you to store your IAM keypair in the OS X keychain so it never ends up stored on disk unencrypted.
 * [aws-shell](https://github.com/awslabs/aws-shell) - An integrated shell for working with the AWS CLI
 * [cli53](https://github.com/barnybug/cli53) - Command line tool for Amazon's Route 53
