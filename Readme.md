@@ -1,4 +1,7 @@
 # bigriver-tools
+
+[![Build Status](https://travis-ci.org/unixorn/bigriver-tools.png)](https://travis-ci.org/unixorn/bigriver-tools)
+
 Some scripts for dealing with AWS
 
 | Script | Description | Credit |
@@ -19,4 +22,3 @@ Some scripts for dealing with AWS
 * [vancluever/aws-runas](https://github.com/vancluever/aws-runas) - Run commands or shell under an AWS IAM role
 
 # Status
-[![Build Status](https://travis-ci.org/unixorn/bigriver-tools.png)](https://travis-ci.org/unixorn/bigriver-tools)
