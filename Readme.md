@@ -22,6 +22,7 @@ Some scripts for dealing with AWS
 * [ec2instances.info/](http://www.ec2instances.info/) - Easy comparison of the various EC2 instance types. Source code is on github at [powdahound/ec2instances.info](https://github.com/powdahound/ec2instances.info)
 * [ec2instancespricing](https://github.com/erans/ec2instancespricing) - Quick and dirty Python (and also PHP) API and CLI (PHP is without CLI) to get EC2 instance pricing for On-Demand and Reserved Instances
 * [lambdash](https://github.com/alestic/lambdash) - Run shell commands inside the AWS Lambda environment.
+* [trufflehog](https://github.com/dxa4481/truffleHog) - Searches through git repositories for high entropy strings, digging deep into commit history and branches. This is effective at finding secrets accidentally committed that contain high entropy like passwords or AWS keys.
 * [vancluever/aws-runas](https://github.com/vancluever/aws-runas) - Run commands or shell under an AWS IAM role
 
 # Status
