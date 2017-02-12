@@ -18,6 +18,7 @@ Some scripts for dealing with AWS
 * [aws-shell](https://github.com/awslabs/aws-shell) - An integrated shell for working with the AWS CLI
 * [cli53](https://github.com/barnybug/cli53) - Command line tool for Amazon's Route 53
 * [ebs-snapshooter](https://github.com/smileisak/ebs-snapshooter) - Python tool to snapshot all your aws-ebs volumes
+* [ec2-fzf](https://github.com/solarnz/ec2-fzf) - Quickly get the address details of ec2 instances
 * [ec2instances.info/](http://www.ec2instances.info/) - Easy comparison of the various EC2 instance types. Source code is on github at [powdahound/ec2instances.info](https://github.com/powdahound/ec2instances.info)
 * [ec2instancespricing](https://github.com/erans/ec2instancespricing) - Quick and dirty Python (and also PHP) API and CLI (PHP is without CLI) to get EC2 instance pricing for On-Demand and Reserved Instances
 * [lambdash](https://github.com/alestic/lambdash) - Run shell commands inside the AWS Lambda environment.
