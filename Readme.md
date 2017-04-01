@@ -16,6 +16,7 @@ Some scripts for dealing with AWS
 * [AWS Open Guide](https://github.com/open-guides/og-aws) - Open source guide to Amazon Web Services. Written by and for engineers using AWS services.
 * [aws-assume-role](https://github.com/remind101/assume-role) - Make it easier to use the `aws sts assume-role` command
 * [aws-keychain](https://github.com/pda/aws-keychain) - macOS-only - allows you to store your IAM keypair in the OS X keychain so it never ends up stored on disk unencrypted.
+* [aws-saws](https://github.com/donnemartin/saws) - A supercharged AWS command line interface (CLI).
 * [aws-shell](https://github.com/awslabs/aws-shell) - An integrated shell for working with the AWS CLI
 * [cli53](https://github.com/barnybug/cli53) - Command line tool for Amazon's Route 53
 * [ebs-snapshooter](https://github.com/smileisak/ebs-snapshooter) - Python tool to snapshot all your aws-ebs volumes
