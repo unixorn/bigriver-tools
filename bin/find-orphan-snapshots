@@ -1,0 +1,8 @@
+#!/bin/bash
+# this gets a list of rogue snapshots which you can script into a delete if you want
+
+OWNER_ID=$1
+aws ec2 describe-snapshots --query 'Snapshots[?OwnerId==`"'"${OWNER_ID}"'"`].[SnapshotId]' --output text > snapshots &
+aws ec2 describe-images --query       'Images[?OwnerId==`"'"${OWNER_ID}"'"`].BlockDeviceMappings[].Ebs.[SnapshotId]' --output text > image_snapshots &
+wait
+comm -2 -3 <(sort snapshots) <(sort image_snapshots | uniq)
