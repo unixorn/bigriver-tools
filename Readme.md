@@ -1,21 +1,19 @@
+
+# bigriver-tools
+
+[![GitHub stars](https://img.shields.io/github/stars/unixorn/bigriver-tools.svg)](https://github.com/unixorn/bigriver-tools/stargazers)
+[![Build Status](https://travis-ci.org/unixorn/bigriver-tools.png)](https://travis-ci.org/unixorn/bigriver-tools)
+
+A collection of scripts for dealing with AWS
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [bigriver-tools](#bigriver-tools)
-- [Status](#status)
 - [Included Scripts](#included-scripts)
 - [Other Resources](#other-resources)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-# bigriver-tools
-
-# Status
-[![GitHub stars](https://img.shields.io/github/stars/unixorn/bigriver-tools.svg)](https://github.com/unixorn/bigriver-tools/stargazers)
-[![Build Status](https://travis-ci.org/unixorn/bigriver-tools.png)](https://travis-ci.org/unixorn/bigriver-tools)
-
-Some scripts for dealing with AWS
 
 # Included Scripts
 
