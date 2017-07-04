@@ -12,6 +12,8 @@ A collection of scripts for dealing with AWS
 
 - [Included Scripts](#included-scripts)
 - [Other Resources](#other-resources)
+  - [Scripts](#scripts)
+  - [References](#references)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
