@@ -3,6 +3,8 @@
 
 [![GitHub stars](https://img.shields.io/github/stars/unixorn/bigriver-tools.svg)](https://github.com/unixorn/bigriver-tools/stargazers)
 [![Build Status](https://travis-ci.org/unixorn/bigriver-tools.png)](https://travis-ci.org/unixorn/bigriver-tools)
+[![Code Climate](https://codeclimate.com/github/unixorn/bigriver-tools/badges/gpa.svg)](https://codeclimate.com/github/unixorn/bigriver-tools)
+[![Issue Count](https://codeclimate.com/github/unixorn/bigriver-tools/badges/issue_count.svg)](https://codeclimate.com/github/unixorn/bigriver-tools)
 
 A collection of scripts for dealing with AWS
 
