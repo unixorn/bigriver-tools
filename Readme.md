@@ -35,6 +35,7 @@ A collection of scripts for dealing with AWS
 * [awless](https://github.com/wallix/awless) - awless is a fast, powerful and easy-to-use command line interface (CLI) to manage Amazon Web Services.
 * [aws-assume-role](https://github.com/remind101/assume-role) - Make it easier to use the `aws sts assume-role` command.
 * [aws-keychain](https://github.com/pda/aws-keychain) - macOS-only - allows you to store your IAM keypair in the OS X keychain so it never ends up stored on disk unencrypted.
+* [aws-pricing-tools](https://github.com/ConcurrenyLabs/aws-pricing-tools) - A lambda that calculates your hourly spend in EC2 and writes it to CloudWatch metrics.
 * [aws-saws](https://github.com/donnemartin/saws) - A supercharged AWS command line interface (CLI).
 * [aws-shell](https://github.com/awslabs/aws-shell) - An integrated shell for working with the AWS CLI.
 * [awsudo](https://github.com/makethunder/awsudo) - A sudo-like utility to manage AWS credentials.
