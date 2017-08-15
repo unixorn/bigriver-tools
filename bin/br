@@ -1,0 +1,44 @@
+#!/usr/bin/env python2.7
+
+'''
+Overall driver for br scripts
+
+Work git-style so `br foo` will look for a program named br-foo, and
+`br foo bar` will look for br-foo-bar.
+'''
+
+import os
+import sys
+from subprocess import check_call
+
+from logrus.cli import findSubCommand, isProgram
+
+
+def brDriver():
+  '''
+  Process the command line arguments and run the appropriate br subcommand.
+
+  We want to be able to do git-style handoffs to subcommands where if we
+  do `br aws foo bar` and the executable br-aws-foo exists, we'll call
+  it with the argument bar.
+
+  We deliberately don't do anything with the arguments other than hand
+  them off to the br subcommand. Subcommands are responsible for their
+  own argument parsing and error handling.
+  '''
+  try:
+    (command, args) = findSubCommand(sys.argv)
+
+    # If we can't construct a subcommand from sys.argv, it'll still be able
+    # to find this br driver script, and re-running ourself isn't useful.
+    if os.path.basename(command) == 'br':
+      print "Could not find a subcommand for %s" % ' '.join(sys.argv)
+      sys.exit(1)
+  except StandardError:
+    print "Could not find a subcommand for %s" % ' '.join(sys.argv)
+    sys.exit(1)
+  check_call([command] + args)
+
+
+if __name__ == '__main__':
+  brDriver()
