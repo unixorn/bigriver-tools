@@ -1,0 +1,176 @@
+#!/usr/bin/env python2.7
+#
+# List the members of an ASG group
+#
+# Copyright 2017, Joe Block <jpb@unixorn.net>
+# License: Apache 2.0
+
+"""
+br-asg-members
+
+Print DNS names for the instances in an Auto Scaling Group
+"""
+
+import argparse
+import logging
+import os
+import sys
+
+import boto.ec2.autoscale
+import boto
+
+
+# this is a pointer to the module object instance itself. We'll attach
+# a logger to it later.
+this = sys.modules[__name__]
+
+
+def getCustomLogger(name, logLevel):
+  '''
+  Set up logging
+
+  :param str name: What log level to set
+  :param str logLevel: What log level to use
+  :rtype: logger
+  '''
+  assert isinstance(name, basestring), ("name must be a string but is %r" % name)
+
+  validLogLevels = ['CRITICAL', 'DEBUG', 'ERROR', 'INFO', 'WARNING']
+
+  if not logLevel:
+    logLevel = 'DEBUG'
+
+  # If they don't specify a valid log level, err on the side of verbosity
+  if logLevel.upper() not in validLogLevels:
+    logLevel = 'DEBUG'
+
+  numericLevel = getattr(logging, logLevel.upper(), None)
+  if not isinstance(numericLevel, int):
+    raise ValueError("Invalid log level: %s" % logLevel)
+
+  logging.basicConfig(level=numericLevel, format='%(asctime)s %(levelname)-9s:%(module)s:%(funcName)s: %(message)s')
+  logger = logging.getLogger(name)
+  return logger
+
+
+def parseCLI():
+  '''
+  Parse command line arguments and return an argparse object
+  '''
+  validLogLevels = ['CRITICAL', 'DEBUG', 'ERROR', 'INFO', 'WARNING']
+
+  parser = argparse.ArgumentParser(description=
+                                   'Read Autoscale DNS names from AWS')
+
+  parser.add_argument('--debug', dest='debug', action='store_true')
+  parser.add_argument('--no-debug', dest='debug', action='store_false')
+  parser.set_defaults(debug=False)
+
+  parser.add_argument('--aws-access-key-id',
+                      help='awsAccessKeyID',
+                      dest='awsAccessKeyID',
+                      default=None)
+
+  parser.add_argument('--aws-secret-access-key',
+                      help='awsSecretAccessKey',
+                      dest='awsSecretAccessKey',
+                      default=None)
+
+  parser.add_argument('--autoscaling-group',
+                      help='Name of autoscaling group to list',
+                      dest='autoscalingGroup',
+                      required=True,
+                      default=None)
+
+  parser.add_argument('--display-private-dns', dest='displayPrivateDNS', action='store_true')
+  parser.add_argument('--no-display-private-dns', dest='displayPrivateDNS', action='store_false')
+  parser.set_defaults(displayPrivateDNS=True)
+
+  parser.add_argument('--display-public-dns', dest='displayPublicDNS', action='store_true')
+  parser.add_argument('--no-display-public-dns', dest='displayPublicDNS', action='store_false')
+  parser.set_defaults(displayPublicDNS=False)
+
+  parser.add_argument('--log-level', type=str, choices=validLogLevels,
+                      help='Set logging level',
+                      dest='logLevel',
+                      default='ERROR')
+
+  parser.add_argument('--region',
+                      help='AWS region to process',
+                      dest='region',
+                      default='us-west-2')
+
+  return parser.parse_args()
+
+
+def listASGmembers(ec2conn, asgConn, groupName=None, public=False, private=False):
+  '''
+  :param ec2.connection ec2conn: EC2 connection to the region we want to look at
+  :param ec2.autoscale.connection asgConn: Autoscale connection to the region we want to look at
+  :param str groupName: Name of the autoscaling group to list
+  :param bool public: Whether or not to display the public DNS name for member instances. Default False.
+  :param bool private: Whether or not to display the private DNS name for member instances. Default False.
+  '''
+  assert isinstance(groupName, basestring), ("groupName must be a string but is %r" % groupName)
+
+  this.logger.debug('Attempting to load membership for %s', groupName)
+  group = asgConn.get_all_groups([groupName])[0]
+  this.logger.debug('Group: %s', group)
+
+  this.logger.debug('Loading instance data for %s', group)
+  this.logger.debug('group.instances: %s', group.instances)
+  instanceIDs = [i.instance_id for i in group.instances]
+
+  this.logger.debug('Loading reservations for %s', group.instances)
+  reservations = ec2conn.get_all_reservations(instanceIDs)
+  instances = [i for r in reservations for i in r.instances]
+  if public:
+    this.logger.debug('Displaying public DNS')
+    dnsNames = [i.public_dns_name for i in instances]
+    print '\n'.join(dnsNames)
+  if private:
+    this.logger.debug('Displaying private DNS')
+    dnsNames = [i.private_dns_name for i in instances]
+    print '\n'.join(dnsNames)
+
+
+def main():
+  '''
+  Do the work.
+  '''
+
+  args = parseCLI()
+  this.logger = getCustomLogger(name='br-asg-members', logLevel=args.logLevel)
+
+  this.logger.info("Processing %s", args.autoscalingGroup)
+  # Set up AWS Credentials
+  if args.awsAccessKeyID:
+    this.logger.info('Reading AWS_ACCESS_KEY_ID from the environment')
+    AWS_ACCESS_KEY_ID = args.awsAccessKeyID
+  else:
+    AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY_ID']
+
+  if args.awsSecretAccessKey:
+    this.logger.info('Reading AWS_SECRET_ACCESS_KEY from the environment')
+    AWS_SECRET_ACCESS_KEY = args.awsSecretAccessKey
+  else:
+    AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
+
+  this.logger.debug('Setting up ec2 connection')
+  ec2Connection = boto.ec2.connect_to_region(args.region,
+                                             aws_access_key_id=AWS_ACCESS_KEY_ID,
+                                             aws_secret_access_key=AWS_SECRET_ACCESS_KEY)
+
+  this.logger.debug('Setting up autoscaler connection to region %s', args.region)
+  asgConnection = boto.ec2.autoscale.connect_to_region(args.region,
+                                                       aws_access_key_id=AWS_ACCESS_KEY_ID,
+                                                       aws_secret_access_key=AWS_SECRET_ACCESS_KEY)
+  try:
+    listASGmembers(ec2conn=ec2Connection, asgConn=asgConnection, groupName=args.autoscalingGroup, private=True)
+  finally:
+    ec2Connection.close()
+    asgConnection.close()
+
+
+if __name__ == '__main__':
+  main()
