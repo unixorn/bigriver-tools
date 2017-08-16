@@ -90,6 +90,14 @@ def parseCLI():
   parser.add_argument('--no-display-public-dns', dest='displayPublicDNS', action='store_false')
   parser.set_defaults(displayPublicDNS=False)
 
+  parser.add_argument('--display-private-ip-address', dest='displayPrivateIP', action='store_true')
+  parser.add_argument('--no-display-private-ip-address', dest='displayPrivateIP', action='store_false')
+  parser.set_defaults(displayPrivateIP=True)
+
+  parser.add_argument('--display-public-ip-address', dest='displayPublicIP', action='store_true')
+  parser.add_argument('--no-display-public-ip-address', dest='displayPublicIP', action='store_false')
+  parser.set_defaults(displayPublicIP=False)
+
   parser.add_argument('--log-level', type=str, choices=validLogLevels,
                       help='Set logging level',
                       dest='logLevel',
@@ -103,7 +111,7 @@ def parseCLI():
   return parser.parse_args()
 
 
-def listASGmembers(ec2conn, asgConn, groupName=None, public=False, private=False):
+def listASGmembers(ec2conn, asgConn, groupName=None, publicDNS=False, privateDNS=False, publicIP=False, privateIP=False):
   '''
   :param ec2.connection ec2conn: EC2 connection to the region we want to look at
   :param ec2.autoscale.connection asgConn: Autoscale connection to the region we want to look at
@@ -124,11 +132,19 @@ def listASGmembers(ec2conn, asgConn, groupName=None, public=False, private=False
   this.logger.debug('Loading reservations for %s', group.instances)
   reservations = ec2conn.get_all_reservations(instanceIDs)
   instances = [i for r in reservations for i in r.instances]
-  if public:
+  if publicIP:
+    this.logger.debug('Displaying public IP')
+    dnsNames = [i.ip_address for i in instances]
+    print '\n'.join(dnsNames)
+  if privateIP:
+    this.logger.debug('Displaying private IP')
+    dnsNames = [i.private_ip_address for i in instances]
+    print '\n'.join(dnsNames)
+  if publicDNS:
     this.logger.debug('Displaying public DNS')
     dnsNames = [i.public_dns_name for i in instances]
     print '\n'.join(dnsNames)
-  if private:
+  if privateDNS:
     this.logger.debug('Displaying private DNS')
     dnsNames = [i.private_dns_name for i in instances]
     print '\n'.join(dnsNames)
@@ -166,7 +182,13 @@ def main():
                                                        aws_access_key_id=AWS_ACCESS_KEY_ID,
                                                        aws_secret_access_key=AWS_SECRET_ACCESS_KEY)
   try:
-    listASGmembers(ec2conn=ec2Connection, asgConn=asgConnection, groupName=args.autoscalingGroup, private=True)
+    listASGmembers(ec2conn=ec2Connection,
+                   asgConn=asgConnection,
+                   groupName=args.autoscalingGroup,
+                   privateDNS=args.displayPrivateDNS,
+                   publicDNS=args.displayPublicDNS,
+                   privateIP=args.displayPrivateIP,
+                   publicIP=args.displayPublicIP,)
   finally:
     ec2Connection.close()
     asgConnection.close()
