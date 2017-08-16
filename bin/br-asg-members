@@ -145,15 +145,15 @@ def main():
   this.logger.info("Processing %s", args.autoscalingGroup)
   # Set up AWS Credentials
   if args.awsAccessKeyID:
-    this.logger.info('Reading AWS_ACCESS_KEY_ID from the environment')
     AWS_ACCESS_KEY_ID = args.awsAccessKeyID
   else:
+    this.logger.debug('Reading AWS_ACCESS_KEY_ID from the environment')
     AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY_ID']
 
   if args.awsSecretAccessKey:
-    this.logger.info('Reading AWS_SECRET_ACCESS_KEY from the environment')
     AWS_SECRET_ACCESS_KEY = args.awsSecretAccessKey
   else:
+    this.logger.debug('Reading AWS_SECRET_ACCESS_KEY from the environment')
     AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
 
   this.logger.debug('Setting up ec2 connection')
