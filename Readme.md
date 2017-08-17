@@ -5,6 +5,7 @@
 [![Build Status](https://travis-ci.org/unixorn/bigriver-tools.png)](https://travis-ci.org/unixorn/bigriver-tools)
 [![Code Climate](https://codeclimate.com/github/unixorn/bigriver-tools/badges/gpa.svg)](https://codeclimate.com/github/unixorn/bigriver-tools)
 [![Issue Count](https://codeclimate.com/github/unixorn/bigriver-tools/badges/issue_count.svg)](https://codeclimate.com/github/unixorn/bigriver-tools)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 A collection of scripts for dealing with AWS
 
