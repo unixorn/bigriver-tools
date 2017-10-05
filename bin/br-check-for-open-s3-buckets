@@ -1,0 +1,13 @@
+#!/bin/bash
+#
+# Scan your S3 buckets for gaping security holes.
+#
+# Copyright 2017, Gabe Abinante
+#
+# Original source: https://github.com/gabinante/aws-tools/blob/master/s3/s3bucketACLChecker.sh
+
+if [[ ! -r ~/.aws/credentials ]]; then
+  echo "You don't have ~/.aws/credentials set up"
+  exit 1
+fi
+for a in $(cat ~/.aws/credentials | grep "\[" | tr -d "[" | tr -d "]"); do for i in $(aws s3api --profile $a list-buckets | grep Name | awk {'print $2'} | tr -d \" | tail -n +2); do echo checking $i for AllUsers access...; aws s3api get-bucket-acl --bucket $i | grep -A 3 "http://acs.amazonaws.com/groups/global/AllUsers" | grep Permission; echo ; done done
