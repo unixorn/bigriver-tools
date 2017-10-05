@@ -25,6 +25,7 @@ A collection of scripts for dealing with AWS
 | Script | Description | Credit |
 | ------ | ----------- | ------ |
 | br-asg-members | Print the public and/or private DNS names for members of a given autoscaling group | jpb@unixorn.net |
+| br-check-for-open-s3-buckets | Check your S3 buckets for open permissions | [Gabe Abinante](https://github.com/gabinante) |
 | br-ec2-instance-dns-name | Print the public IP for a given instance ID | jpb@unixorn.net |
 | br-ec2-instance-state | Print the state (running, stopped, etc) for a given instance ID | jpb@unixorn.net |
 
