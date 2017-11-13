@@ -1,0 +1,30 @@
+#!/usr/bin/env python3
+#
+# Author: Joe Gardner https://github.com/joehack3r/aws
+
+import argparse
+import boto3
+import sys
+def check_user_keys(user, access_key):
+    key_response = iam_client.list_access_keys(UserName=user) # Users are limited to 2 keys so no need to worry about pagination
+    for key in key_response['AccessKeyMetadata']:
+        if key['AccessKeyId'] == access_key:
+            print("Access Key " + access_key + " belongs to " + key['UserName'])
+            sys.exit(0)
+iam_client = boto3.client('iam')
+# Arguments
+parser = argparse.ArgumentParser(description='Search IAM users for an AWS Access Key ID')
+parser.add_argument('--access-key-id', action='store', metavar='<AWS Access Key ID>', dest='unknown_access_key', required=True,
+                   help='Access Key ID to match against a user')
+args = parser.parse_args()
+user_response = iam_client.list_users()
+for user in user_response['Users']:
+    check_user_keys(user['UserName'], args.unknown_access_key)
+if 'Marker' in user_response:
+    while True:
+        user_response = iam_client.list_users(Marker=user_response['Marker'])
+        for user in user_response['Users']:
+            check_user_keys(user['UserName'], args.unknown_access_key)
+        if 'Marker' not in user_response:
+            break
+print("Could not find a user for key " + args.unknown_access_key +". Perhaps it's from a role.")

@@ -28,6 +28,7 @@ A collection of scripts for dealing with AWS
 | br-check-for-open-s3-buckets | Check your S3 buckets for open permissions | [Gabe Abinante](https://github.com/gabinante) |
 | br-ec2-instance-dns-name | Print the public IP for a given instance ID | jpb@unixorn.net |
 | br-ec2-instance-state | Print the state (running, stopped, etc) for a given instance ID | jpb@unixorn.net |
+| br-who-are-you | Shows which IAM user matches a given ACCESS_KEY_ID | [Joe Gardner](https://github.com/joehack3r) |
 
 # Other Resources
 
@@ -46,6 +47,7 @@ A collection of scripts for dealing with AWS
 * [ebs-snapshooter](https://github.com/smileisak/ebs-snapshooter) - Python tool to snapshot all your aws-ebs volumes.
 * [ec2-fzf](https://github.com/solarnz/ec2-fzf) - Quickly get the address details of ec2 instances.
 * [ec2instancespricing](https://github.com/erans/ec2instancespricing) - Quick and dirty Python (and also PHP) API and CLI (PHP is without CLI) to get EC2 instance pricing for On-Demand and Reserved Instances.
+* [joehack3r/aws](https://github.com/joehack3r/aws) - Joe Gardner's AWS tool scripts
 * [lambdash](https://github.com/alestic/lambdash) - Run shell commands inside the AWS Lambda environment.
 * [sevenseconds](https://github.com/zalando-stups/sevenseconds) - A command line utility for configuring AWS accounts.
 * [trufflehog](https://github.com/dxa4481/truffleHog) - Searches through git repositories for high entropy strings, digging deep into commit history and branches. This is effective at finding secrets accidentally committed that contain high entropy like passwords or AWS keys.
