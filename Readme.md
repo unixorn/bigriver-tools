@@ -42,11 +42,13 @@ A collection of scripts for dealing with AWS
 * [aws-pricing-tools](https://github.com/ConcurrenyLabs/aws-pricing-tools) - A lambda that calculates your hourly spend in EC2 and writes it to CloudWatch metrics.
 * [aws-saws](https://github.com/donnemartin/saws) - A supercharged AWS command line interface (CLI).
 * [aws-shell](https://github.com/awslabs/aws-shell) - An integrated shell for working with the AWS CLI.
+* [awslogs](https://github.com/jorgebastida/awslogs) - AWS CloudWatch logs for Humans™.
 * [awsudo](https://github.com/makethunder/awsudo) - A sudo-like utility to manage AWS credentials.
 * [cli53](https://github.com/barnybug/cli53) - Command line tool for Amazon's Route 53.
 * [cw](https://github.com/lucagrulla/cw) - Tail AWS Cloudwatch Logs so you can `grep` them.
 * [ebs-snapshooter](https://github.com/smileisak/ebs-snapshooter) - Python tool to snapshot all your aws-ebs volumes.
 * [ec2-fzf](https://github.com/solarnz/ec2-fzf) - Quickly get the address details of ec2 instances.
+* [ec2-ssh](https://pypi.python.org/pypi/ec2-ssh) - ssh into instances by tag instead of looking up the instance ID and then copying the IP address
 * [ec2instancespricing](https://github.com/erans/ec2instancespricing) - Quick and dirty Python (and also PHP) API and CLI (PHP is without CLI) to get EC2 instance pricing for On-Demand and Reserved Instances.
 * [joehack3r/aws](https://github.com/joehack3r/aws) - Joe Gardner's AWS tool scripts
 * [lambdash](https://github.com/alestic/lambdash) - Run shell commands inside the AWS Lambda environment.
