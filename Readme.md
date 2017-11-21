@@ -7,7 +7,9 @@
 [![Code Climate](https://codeclimate.com/github/unixorn/bigriver-tools/badges/gpa.svg)](https://codeclimate.com/github/unixorn/bigriver-tools)
 [![Issue Count](https://codeclimate.com/github/unixorn/bigriver-tools/badges/issue_count.svg)](https://codeclimate.com/github/unixorn/bigriver-tools)
 
-A collection of scripts for dealing with AWS
+bigriver tools is a collection of helper scripts for dealing with AWS. We all end up writing them, then re-writing them at the next job because they were in a corporate repo instead of open source. I hate rewriting things if I can avoid it, so here's a place to park your AWS helper scripts.
+
+It's packaged as a ZSH plugin to make it easier to use with plugin managers. If you aren't using a ZSH plugin manager like [zgen](https://github.com/tarjoilija/zgen) or [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh), or you prefer a shell other than ZSH, install this script collection by  cloning this repo and adding the `bin` directory to your `$PATH`.
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
