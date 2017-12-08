@@ -50,6 +50,7 @@ It's packaged as a ZSH plugin to make it easier to use with plugin managers. If 
 * [cli53](https://github.com/barnybug/cli53) - Command line tool for Amazon's Route 53.
 * [cw](https://github.com/lucagrulla/cw) - Tail AWS Cloudwatch Logs so you can `grep` them.
 * [ebs-snapshooter](https://github.com/smileisak/ebs-snapshooter) - Python tool to snapshot all your aws-ebs volumes.
+* [ec2-find](https://github.com/Findly-Inc/ec2-find) - CLI tool to find AWS EC2 instances by tag values and show concise output that is both human-readable and scripting-friendly. The command syntax and output is greatly simplified compared to using aws ec2 describe-instances.
 * [ec2-fzf](https://github.com/solarnz/ec2-fzf) - Quickly get the address details of ec2 instances.
 * [ec2-ssh](https://pypi.python.org/pypi/ec2-ssh) - ssh into instances by tag instead of looking up the instance ID and then copying the IP address
 * [ec2instancespricing](https://github.com/erans/ec2instancespricing) - Quick and dirty Python (and also PHP) API and CLI (PHP is without CLI) to get EC2 instance pricing for On-Demand and Reserved Instances.
