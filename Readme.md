@@ -44,7 +44,7 @@ It's packaged as a ZSH plugin to make it easier to use with plugin managers. If 
 * [aws-pricing-tools](https://github.com/ConcurrenyLabs/aws-pricing-tools) - A lambda that calculates your hourly spend in EC2 and writes it to CloudWatch metrics.
 * [aws-saws](https://github.com/donnemartin/saws) - A supercharged AWS command line interface (CLI).
 * [aws-shell](https://github.com/awslabs/aws-shell) - An integrated shell for working with the AWS CLI.
-* [aws-vault](https://github.com/99designs/aws-vault) - A vault for securely storing and accessing AWS credentials in development environments. There's a zsh plugin available for it as well, [zsh-aws-vault](https://github.com/blimmer/zsh-aws-vault).
+* [aws-vault](https://github.com/99designs/aws-vault) - A vault for securely storing and accessing AWS credentials in development environments. There's a ZSH plugin available for it as well, [zsh-aws-vault](https://github.com/blimmer/zsh-aws-vault), and Fernando Miguel wrote a [aws-vault quick guide](https://github.com/FernandoMiguel/kb/tree/master/aws-vault) to setting up and using it.
 * [awslogs](https://github.com/jorgebastida/awslogs) - AWS CloudWatch logs for Humans™.
 * [awsudo](https://github.com/makethunder/awsudo) - A sudo-like utility to manage AWS credentials.
 * [cli53](https://github.com/barnybug/cli53) - Command line tool for Amazon's Route 53.
