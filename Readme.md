@@ -55,6 +55,7 @@ It's packaged as a ZSH plugin to make it easier to use with plugin managers. If 
 * [ec2-fzf](https://github.com/solarnz/ec2-fzf) - Quickly get the address details of ec2 instances.
 * [ec2-ssh](https://pypi.python.org/pypi/ec2-ssh) - ssh into instances by tag instead of looking up the instance ID and then copying the IP address
 * [ec2instancespricing](https://github.com/erans/ec2instancespricing) - Quick and dirty Python (and also PHP) API and CLI (PHP is without CLI) to get EC2 instance pricing for On-Demand and Reserved Instances.
+* [ec2ssh](https://github.com/h3poteto/zsh-ec2ssh) - ZSH plugin to list EC2 instances and ssh login into them more easily.
 * [goofys](https://github.com/kahing/goofys) - Allows you to mount an S3 bucket as a filey system. It's a Filey System instead of a File System because goofys strives for performance first and POSIX second. Particularly things that are difficult to support on S3 or would translate into more than one round-trip would either fail (random writes) or faked (no per-file permission). Goofys does not have a on disk data cache (checkout [catfs](https://github.com/kahing/catfs)), and consistency model is close-to-open.
 * [joehack3r/aws](https://github.com/joehack3r/aws) - Joe Gardner's AWS tool scripts
 * [lambdash](https://github.com/alestic/lambdash) - Run shell commands inside the AWS Lambda environment.
