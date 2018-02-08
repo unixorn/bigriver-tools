@@ -45,6 +45,7 @@ It's packaged as a ZSH plugin to make it easier to use with plugin managers. If 
 * [aws-saws](https://github.com/donnemartin/saws) - A supercharged AWS command line interface (CLI).
 * [aws-shell](https://github.com/awslabs/aws-shell) - An integrated shell for working with the AWS CLI.
 * [aws-vault](https://github.com/99designs/aws-vault) - A vault for securely storing and accessing AWS credentials in development environments. There's a ZSH plugin available for it as well, [zsh-aws-vault](https://github.com/blimmer/zsh-aws-vault), and Fernando Miguel wrote a [aws-vault quick guide](https://github.com/FernandoMiguel/kb/tree/master/aws-vault) to setting up and using it.
+* [awscli-aliases](https://github.com/awslabs/awscli-aliases) - Add a bunch of convenience aliases for the AWS cli
 * [awslogs](https://github.com/jorgebastida/awslogs) - AWS CloudWatch logs for Humans™.
 * [awsudo](https://github.com/makethunder/awsudo) - A sudo-like utility to manage AWS credentials.
 * [chamber](https://github.com/segmentio/chamber) - Chamber is a tool for managing secrets stored in SSM Parameter Store.
@@ -59,8 +60,8 @@ It's packaged as a ZSH plugin to make it easier to use with plugin managers. If 
 * [goofys](https://github.com/kahing/goofys) - Allows you to mount an S3 bucket as a filey system. It's a Filey System instead of a File System because goofys strives for performance first and POSIX second. Particularly things that are difficult to support on S3 or would translate into more than one round-trip would either fail (random writes) or faked (no per-file permission). Goofys does not have a on disk data cache (checkout [catfs](https://github.com/kahing/catfs)), and consistency model is close-to-open.
 * [joehack3r/aws](https://github.com/joehack3r/aws) - Joe Gardner's AWS tool scripts
 * [lambdash](https://github.com/alestic/lambdash) - Run shell commands inside the AWS Lambda environment.
-* [sevenseconds](https://github.com/zalando-stups/sevenseconds) - A command line utility for configuring AWS accounts.
 * [Scout2](https://github.com/nccgroup/Scout2) - Scout2 is a security tool that lets AWS administrators assess their environment's security posture. Using the AWS API, Scout2 gathers configuration data for manual inspection and highlights high-risk areas automatically. Rather than pouring through dozens of pages on the web, Scout2 supplies a clear view of the attack surface automatically.
+* [sevenseconds](https://github.com/zalando-stups/sevenseconds) - A command line utility for configuring AWS accounts.
 * [trufflehog](https://github.com/dxa4481/truffleHog) - Searches through git repositories for high entropy strings, digging deep into commit history and branches. This is effective at finding secrets accidentally committed that contain high entropy like passwords or AWS keys.
 * [vancluever/aws-runas](https://github.com/vancluever/aws-runas) - Run commands or shell under an AWS IAM role.
 
