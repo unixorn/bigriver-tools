@@ -40,6 +40,7 @@ It's packaged as a ZSH plugin to make it easier to use with plugin managers. If 
 * [autospotting](https://github.com/cristim/autospotting) - Pay up to 10 times less on EC2 by automatically replacing AutoScaling nodes with spot instances.
 * [awless](https://github.com/wallix/awless) - awless is a fast, powerful and easy-to-use command line interface (CLI) to manage Amazon Web Services.
 * [aws-assume-role](https://github.com/remind101/assume-role) - Make it easier to use the `aws sts assume-role` command.
+* [aws-centralized-logging](https://github.com/awslabs/aws-centralized-logging) - This solution provides an administrator a 360-degree logging view of an AWS account, including both application and infrastructure, as well as AWS-native logs.
 * [aws-keychain](https://github.com/pda/aws-keychain) - macOS-only - allows you to store your IAM keypair in the OS X keychain so it never ends up stored on disk unencrypted.
 * [aws-pricing-tools](https://github.com/ConcurrenyLabs/aws-pricing-tools) - A lambda that calculates your hourly spend in EC2 and writes it to CloudWatch metrics.
 * [aws-saws](https://github.com/donnemartin/saws) - A supercharged AWS command line interface (CLI).
