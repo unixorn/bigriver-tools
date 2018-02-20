@@ -48,6 +48,7 @@ It's packaged as a ZSH plugin to make it easier to use with plugin managers. If 
 * [aws-vault](https://github.com/99designs/aws-vault) - A vault for securely storing and accessing AWS credentials in development environments. There's a ZSH plugin available for it as well, [zsh-aws-vault](https://github.com/blimmer/zsh-aws-vault), and Fernando Miguel wrote a [aws-vault quick guide](https://github.com/FernandoMiguel/kb/tree/master/aws-vault) to setting up and using it.
 * [awscli-aliases](https://github.com/awslabs/awscli-aliases) - Add a bunch of convenience aliases for the AWS cli
 * [awslogs](https://github.com/jorgebastida/awslogs) - AWS CloudWatch logs for Humans™.
+* [awsp](https://github.com/johnnyopao/awsp) - Tool for easily switching between AWS profiles
 * [awsudo](https://github.com/makethunder/awsudo) - A sudo-like utility to manage AWS credentials.
 * [chamber](https://github.com/segmentio/chamber) - Chamber is a tool for managing secrets stored in SSM Parameter Store.
 * [cli53](https://github.com/barnybug/cli53) - Command line tool for Amazon's Route 53.
