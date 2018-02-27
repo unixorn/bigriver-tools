@@ -52,6 +52,7 @@ It's packaged as a ZSH plugin to make it easier to use with plugin managers. If 
 * [awsudo](https://github.com/makethunder/awsudo) - A sudo-like utility to manage AWS credentials.
 * [chamber](https://github.com/segmentio/chamber) - Chamber is a tool for managing secrets stored in SSM Parameter Store.
 * [cli53](https://github.com/barnybug/cli53) - Command line tool for Amazon's Route 53.
+* [cloud-custodian](https://github.com/capitalone/cloud-custodian) - Cloud Custodian can be used to manage AWS accounts by ensuring real time compliance to security policies (like encryption and access requirements), tag policies, and cost management via garbage collection of unused resources and off-hours resource management.
 * [cw](https://github.com/lucagrulla/cw) - Tail AWS Cloudwatch Logs so you can `grep` them.
 * [ebs-snapshooter](https://github.com/smileisak/ebs-snapshooter) - Python tool to snapshot all your aws-ebs volumes.
 * [ec2-find](https://github.com/Findly-Inc/ec2-find) - CLI tool to find AWS EC2 instances by tag values and show concise output that is both human-readable and scripting-friendly. The command syntax and output is greatly simplified compared to using aws ec2 describe-instances.
