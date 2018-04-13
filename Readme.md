@@ -43,6 +43,7 @@ It's packaged as a ZSH plugin to make it easier to use with plugin managers. If 
 * [aws-centralized-logging](https://github.com/awslabs/aws-centralized-logging) - This solution provides an administrator a 360-degree logging view of an AWS account, including both application and infrastructure, as well as AWS-native logs.
 * [aws-keychain](https://github.com/pda/aws-keychain) - macOS-only - allows you to store your IAM keypair in the OS X keychain so it never ends up stored on disk unencrypted.
 * [aws-pricing-tools](https://github.com/ConcurrenyLabs/aws-pricing-tools) - A lambda that calculates your hourly spend in EC2 and writes it to CloudWatch metrics.
+* [aws-runas](https://github.com/vancluever/aws-runas) - Run commands with a AWS IAM role.
 * [aws-saws](https://github.com/donnemartin/saws) - A supercharged AWS command line interface (CLI).
 * [aws-shell](https://github.com/awslabs/aws-shell) - An integrated shell for working with the AWS CLI.
 * [aws-vault](https://github.com/99designs/aws-vault) - A vault for securely storing and accessing AWS credentials in development environments. There's a ZSH plugin available for it as well, [zsh-aws-vault](https://github.com/blimmer/zsh-aws-vault), and Fernando Miguel wrote a [aws-vault quick guide](https://github.com/FernandoMiguel/kb/blob/master/aws/SetupMFA.md#aws-vault) to setting up and using it.
