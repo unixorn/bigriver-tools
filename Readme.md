@@ -66,6 +66,7 @@ It's packaged as a ZSH plugin to make it easier to use with plugin managers. If 
 * [joehack3r/aws](https://github.com/joehack3r/aws) - Joe Gardner's AWS tool scripts
 * [lambdash](https://github.com/alestic/lambdash) - Run shell commands inside the AWS Lambda environment.
 * [miam](https://github.com/codenize-tools/miam) - Miam is a tool to manage IAM using a DSL instead of JSON.
+* [s3nukem](https://github.com/lathanh/s3nukem) - A single-file Ruby script to delete Amazon S3 an bucket with many objects (millions) quickly by using multiple threads to retrieve and delete the individual objects.
 * [Scout2](https://github.com/nccgroup/Scout2) - Scout2 is a security tool that lets AWS administrators assess their environment's security posture. Using the AWS API, Scout2 gathers configuration data for manual inspection and highlights high-risk areas automatically. Rather than pouring through dozens of pages on the web, Scout2 supplies a clear view of the attack surface automatically.
 * [sevenseconds](https://github.com/zalando-stups/sevenseconds) - A command line utility for configuring AWS accounts.
 * [trufflehog](https://github.com/dxa4481/truffleHog) - Searches through git repositories for high entropy strings, digging deep into commit history and branches. This is effective at finding secrets accidentally committed that contain high entropy like passwords or AWS keys.
