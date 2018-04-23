@@ -56,7 +56,7 @@ It's packaged as a ZSH plugin to make it easier to use with plugin managers. If 
 * [cloud-custodian](https://github.com/capitalone/cloud-custodian) - Cloud Custodian can be used to manage AWS accounts by ensuring real time compliance to security policies (like encryption and access requirements), tag policies, and cost management via garbage collection of unused resources and off-hours resource management.
 * [cw](https://github.com/lucagrulla/cw) - Tail AWS Cloudwatch Logs so you can `grep` them.
 * [ebs-snapshooter](https://github.com/smileisak/ebs-snapshooter) - Python tool to snapshot all your aws-ebs volumes.
-* [ec2-find](https://github.com/Findly-Inc/ec2-find) - CLI tool to find AWS EC2 instances by tag values and show concise output that is both human-readable and scripting-friendly. The command syntax and output is greatly simplified compared to using aws ec2 describe-instances.
+* [ec2-find](https://github.com/ncjones/ec2-find) - CLI tool to find AWS EC2 instances by tag values and show concise output that is both human-readable and scripting-friendly. The command syntax and output is greatly simplified compared to using aws ec2 describe-instances.
 * [ec2-fzf](https://github.com/solarnz/ec2-fzf) - Quickly get the address details of ec2 instances.
 * [ec2-ssh](https://pypi.python.org/pypi/ec2-ssh) - ssh into instances by tag instead of looking up the instance ID and then copying the IP address
 * [ec2instancespricing](https://github.com/erans/ec2instancespricing) - Quick and dirty Python (and also PHP) API and CLI (PHP is without CLI) to get EC2 instance pricing for On-Demand and Reserved Instances.
@@ -67,6 +67,7 @@ It's packaged as a ZSH plugin to make it easier to use with plugin managers. If 
 * [lambdash](https://github.com/alestic/lambdash) - Run shell commands inside the AWS Lambda environment.
 * [miam](https://github.com/codenize-tools/miam) - Miam is a tool to manage IAM using a DSL instead of JSON.
 * [s3nukem](https://github.com/lathanh/s3nukem) - A single-file Ruby script to delete Amazon S3 an bucket with many objects (millions) quickly by using multiple threads to retrieve and delete the individual objects.
+* [s5cmd](https://github.com/peakgames/s5cmd) - A parallel S3 and local filesystem execution tool.
 * [Scout2](https://github.com/nccgroup/Scout2) - Scout2 is a security tool that lets AWS administrators assess their environment's security posture. Using the AWS API, Scout2 gathers configuration data for manual inspection and highlights high-risk areas automatically. Rather than pouring through dozens of pages on the web, Scout2 supplies a clear view of the attack surface automatically.
 * [sevenseconds](https://github.com/zalando-stups/sevenseconds) - A command line utility for configuring AWS accounts.
 * [trufflehog](https://github.com/dxa4481/truffleHog) - Searches through git repositories for high entropy strings, digging deep into commit history and branches. This is effective at finding secrets accidentally committed that contain high entropy like passwords or AWS keys.
