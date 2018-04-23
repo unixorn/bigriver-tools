@@ -12,6 +12,10 @@
 <!--- Include details of your testing environment, and the tests you ran to -->
 <!--- see how your change affects other areas of the code, etc. -->
 
+# Rights
+
+- [ ] This repository is covered by the Apache 2.0 license (except where noted in individual scripts' source), and I agree that this PR contribution is also subject to the Apache 2.0 license.
+
 # Types of changes
 <!--- What types of changes does your code introduce? Put an `x` in all the boxes that apply: -->
 - [ ] Adding utility script(s)
