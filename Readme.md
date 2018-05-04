@@ -66,6 +66,7 @@ It's packaged as a ZSH plugin to make it easier to use with plugin managers. If 
 * [goofys](https://github.com/kahing/goofys) - Allows you to mount an S3 bucket as a filey system. It's a Filey System instead of a File System because goofys strives for performance first and POSIX second. Particularly things that are difficult to support on S3 or would translate into more than one round-trip would either fail (random writes) or faked (no per-file permission). Goofys does not have a on disk data cache (checkout [catfs](https://github.com/kahing/catfs)), and consistency model is close-to-open.
 * [joehack3r/aws](https://github.com/joehack3r/aws) - Joe Gardner's AWS tool scripts
 * [lambdash](https://github.com/alestic/lambdash) - Run shell commands inside the AWS Lambda environment.
+* [let-me-in](https://github.com/rlister/let-me-in) - Add your IP to an AWS security group so you can ssh to instances.
 * [miam](https://github.com/codenize-tools/miam) - Miam is a tool to manage IAM using a DSL instead of JSON.
 * [s3nukem](https://github.com/lathanh/s3nukem) - A single-file Ruby script to delete Amazon S3 an bucket with many objects (millions) quickly by using multiple threads to retrieve and delete the individual objects.
 * [s5cmd](https://github.com/peakgames/s5cmd) - A parallel S3 and local filesystem execution tool.
