@@ -43,6 +43,7 @@ It's packaged as a ZSH plugin to make it easier to use with plugin managers. If 
 * [aws-centralized-logging](https://github.com/awslabs/aws-centralized-logging) - This solution provides an administrator a 360-degree logging view of an AWS account, including both application and infrastructure, as well as AWS-native logs.
 * [aws-keychain](https://github.com/pda/aws-keychain) - macOS-only - allows you to store your IAM keypair in the OS X keychain so it never ends up stored on disk unencrypted.
 * [aws-maintenance-lambda](https://github.com/indix/aws-maintenance-lambda) - A lambda function to send alerts (to Slack, HipChat) on AWS maintenance events.
+* [aws-missing-tools](https://github.com/colinbjohnson/aws-missing-tools) - A suite of tools that extends Amazon's provided command line tools.
 * [aws-pricing-tools](https://github.com/ConcurrenyLabs/aws-pricing-tools) - A lambda that calculates your hourly spend in EC2 and writes it to CloudWatch metrics.
 * [aws-runas](https://github.com/vancluever/aws-runas) - Run commands with a AWS IAM role.
 * [aws-saws](https://github.com/donnemartin/saws) - A supercharged AWS command line interface (CLI).
