@@ -13,9 +13,10 @@ It's packaged as a ZSH plugin to make it easier to use with plugin managers. If 
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+**Table of Contents**
 
 - [Included Scripts](#included-scripts)
+- [Usage](#usage)
 - [Other Resources](#other-resources)
   - [Scripts](#scripts)
   - [References](#references)
@@ -31,6 +32,10 @@ It's packaged as a ZSH plugin to make it easier to use with plugin managers. If 
 | br-ec2-instance-dns-name | Print the public IP for a given instance ID | jpb@unixorn.net |
 | br-ec2-instance-state | Print the state (running, stopped, etc) for a given instance ID | jpb@unixorn.net |
 | br-who-are-you | Shows which IAM user matches a given ACCESS_KEY_ID | [Joe Gardner](https://github.com/joehack3r) |
+
+# Usage
+
+Inspired by how `git` runs helper tools, bigriver-tools includes a driver script `br`, which will run scripts with names starting with `br-` so you can do `br who-are-you --access-key-id XYZ` and it will run `br-who-are-you` and pass the arguments to it. 
 
 # Other Resources
 
