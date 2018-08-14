@@ -87,6 +87,7 @@ Inspired by how `git` runs helper tools, bigriver-tools includes a driver script
 
 ## References
 
+* [A Comprehensive Guide to Authenticating to AWS on the Command Line](https://blog.gruntwork.io/a-comprehensive-guide-to-authenticating-to-aws-on-the-command-line-63656a686799) details exactly that.
 * [AWS Open Guide](https://github.com/open-guides/og-aws) - Open source guide to Amazon Web Services. Written by and for engineers using AWS services.
 * [ec2instances.info/](http://www.ec2instances.info/) - Easy comparison of the various EC2 instance types. Source code is on github at [powdahound/ec2instances.info](https://github.com/powdahound/ec2instances.info).
 * [Last Week in AWS](https://snarkive.lastweekinaws.com/) - Archive of [Corey Quinn](https://twitter.com/quinnypig)'s Last Week in AWS newsletter.
