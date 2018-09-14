@@ -52,6 +52,7 @@ Inspired by how `git` runs helper tools, bigriver-tools includes a driver script
 * [aws-pricing-tools](https://github.com/ConcurrenyLabs/aws-pricing-tools) - A lambda that calculates your hourly spend in EC2 and writes it to CloudWatch metrics.
 * [aws-runas](https://github.com/vancluever/aws-runas) - Run commands with a AWS IAM role.
 * [aws-saws](https://github.com/donnemartin/saws) - A supercharged AWS command line interface (CLI).
+* [aws-security-viz](https://github.com/anaynayak/aws-security-viz) - Visualize your current AWS/Amazon ec2 security group ingress configuration. Requires [graphviz](http://graphviz.org).
 * [aws-shell](https://github.com/awslabs/aws-shell) - An integrated shell for working with the AWS CLI.
 * [aws-vault](https://github.com/99designs/aws-vault) - A vault for securely storing and accessing AWS credentials in development environments. There's a ZSH plugin available for it as well, [zsh-aws-vault](https://github.com/blimmer/zsh-aws-vault), and Fernando Miguel wrote a [aws-vault quick guide](https://github.com/FernandoMiguel/kb/blob/master/aws/SetupMFA.md#aws-vault) to setting up and using it.
 * [awscli-aliases](https://github.com/awslabs/awscli-aliases) - Add a bunch of convenience aliases for the AWS cli
