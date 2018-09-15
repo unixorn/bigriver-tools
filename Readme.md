@@ -46,6 +46,7 @@ Inspired by how `git` runs helper tools, bigriver-tools includes a driver script
 * [awless](https://github.com/wallix/awless) - awless is a fast, powerful and easy-to-use command line interface (CLI) to manage Amazon Web Services.
 * [aws-assume-role](https://github.com/remind101/assume-role) - Make it easier to use the `aws sts assume-role` command.
 * [aws-centralized-logging](https://github.com/awslabs/aws-centralized-logging) - This solution provides an administrator a 360-degree logging view of an AWS account, including both application and infrastructure, as well as AWS-native logs.
+* [aws-iam-policy-tool](https://github.com/tilfin/aws-iam-policy-tool) - A cli tool to manage AWS IAM roles and their policies.
 * [aws-keychain](https://github.com/pda/aws-keychain) - macOS-only - allows you to store your IAM keypair in the OS X keychain so it never ends up stored on disk unencrypted.
 * [aws-maintenance-lambda](https://github.com/indix/aws-maintenance-lambda) - A lambda function to send alerts (to Slack, HipChat) on AWS maintenance events.
 * [aws-missing-tools](https://github.com/colinbjohnson/aws-missing-tools) - A suite of tools that extends Amazon's provided command line tools.
