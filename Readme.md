@@ -35,7 +35,7 @@ It's packaged as a ZSH plugin to make it easier to use with plugin managers. If 
 
 # Usage
 
-Inspired by how `git` runs helper tools, bigriver-tools includes a driver script `br`, which will run scripts with names starting with `br-` so you can do `br who-are-you --access-key-id XYZ` and it will run `br-who-are-you` and pass the arguments to it. 
+Inspired by how `git` runs helper tools, bigriver-tools includes a driver script `br`, which will run scripts with names starting with `br-` so you can do `br who-are-you --access-key-id XYZ` and it will run `br-who-are-you` and pass the arguments to it.
 
 # Other Resources
 
@@ -63,6 +63,7 @@ Inspired by how `git` runs helper tools, bigriver-tools includes a driver script
 * [chamber](https://github.com/segmentio/chamber) - Chamber is a tool for managing secrets stored in SSM Parameter Store.
 * [cli53](https://github.com/barnybug/cli53) - Command line tool for Amazon's Route 53.
 * [cloud-custodian](https://github.com/capitalone/cloud-custodian) - Cloud Custodian can be used to manage AWS accounts by ensuring real time compliance to security policies (like encryption and access requirements), tag policies, and cost management via garbage collection of unused resources and off-hours resource management.
+* [cloud-nuke](https://github.com/gruntwork-io/cloud-nuke) - A tool for cleaning up an AWS account by nuking (deleting) all resources within it.
 * [cw](https://github.com/lucagrulla/cw) - Tail AWS Cloudwatch Logs so you can `grep` them.
 * [delete-bucket](https://github.com/tantona/delete-bucket) - CLI tool for deleting versioned AWS S3 Buckets.
 * [ebs-snapshooter](https://github.com/smileisak/ebs-snapshooter) - Python tool to snapshot all your aws-ebs volumes.
