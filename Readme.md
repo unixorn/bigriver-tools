@@ -48,6 +48,7 @@ Inspired by how `git` runs helper tools, bigriver-tools includes a driver script
 * [aws-centralized-logging](https://github.com/awslabs/aws-centralized-logging) - This solution provides an administrator a 360-degree logging view of an AWS account, including both application and infrastructure, as well as AWS-native logs.
 * [aws-iam-policy-tool](https://github.com/tilfin/aws-iam-policy-tool) - A cli tool to manage AWS IAM roles and their policies.
 * [aws-keychain](https://github.com/pda/aws-keychain) - macOS-only - allows you to store your IAM keypair in the OS X keychain so it never ends up stored on disk unencrypted.
+* [aws-limit-monitor](https://github.com/awslabs/aws-limit-monitor) - Customizable Lambda functions to proactively notify you when you are about to hit an AWS service limit. Requires Enterprise or Business level support to access Support API.
 * [aws-maintenance-lambda](https://github.com/indix/aws-maintenance-lambda) - A lambda function to send alerts (to Slack, HipChat) on AWS maintenance events.
 * [aws-missing-tools](https://github.com/colinbjohnson/aws-missing-tools) - A suite of tools that extends Amazon's provided command line tools.
 * [aws-pricing-tools](https://github.com/ConcurrenyLabs/aws-pricing-tools) - A lambda that calculates your hourly spend in EC2 and writes it to CloudWatch metrics.
