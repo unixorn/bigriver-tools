@@ -66,6 +66,7 @@ Inspired by how `git` runs helper tools, bigriver-tools includes a driver script
 * [cloudformation-plus](https://github.com/HewlettPackard/cloudformation-plus/) - Python library that adds features to AWS CloudFormation that reduce the amount of code you must write in order to automate the deployment of non-trivial cloud-based systems. Specifically, this library adds elements to the CloudFormation template language that perform tasks that otherwise would need to be done in your deploy script.
 * [cloud-custodian](https://github.com/capitalone/cloud-custodian) - Cloud Custodian can be used to manage AWS accounts by ensuring real time compliance to security policies (like encryption and access requirements), tag policies, and cost management via garbage collection of unused resources and off-hours resource management.
 * [cloud-nuke](https://github.com/gruntwork-io/cloud-nuke) - A tool for cleaning up an AWS account by nuking (deleting) all resources within it.
+* [copy-encrypted-ami](https://github.com/aws-samples/copy-encrypted-ami) - Automate copying encrypted AMIs across accounts and regions.
 * [cw](https://github.com/lucagrulla/cw) - Tail AWS Cloudwatch Logs so you can `grep` them.
 * [delete-bucket](https://github.com/tantona/delete-bucket) - CLI tool for deleting versioned AWS S3 Buckets.
 * [ebs-snapshooter](https://github.com/smileisak/ebs-snapshooter) - Python tool to snapshot all your aws-ebs volumes.
