@@ -61,11 +61,12 @@ Inspired by how `git` runs helper tools, bigriver-tools includes a driver script
 * [awslogs](https://github.com/jorgebastida/awslogs) - AWS CloudWatch logs for Humans™.
 * [awsp](https://github.com/johnnyopao/awsp) - Tool for easily switching between AWS profiles
 * [awsudo](https://github.com/makethunder/awsudo) - A sudo-like utility to manage AWS credentials.
+* [awsweeper](https://github.com/jorgebastida/awslogs) - A tool to clean out an AWS account so you don't get the mystery $0.22 monthly bills.
 * [chamber](https://github.com/segmentio/chamber) - Chamber is a tool for managing secrets stored in SSM Parameter Store.
 * [cli53](https://github.com/barnybug/cli53) - Command line tool for Amazon's Route 53.
-* [cloudformation-plus](https://github.com/HewlettPackard/cloudformation-plus/) - Python library that adds features to AWS CloudFormation that reduce the amount of code you must write in order to automate the deployment of non-trivial cloud-based systems. Specifically, this library adds elements to the CloudFormation template language that perform tasks that otherwise would need to be done in your deploy script.
 * [cloud-custodian](https://github.com/capitalone/cloud-custodian) - Cloud Custodian can be used to manage AWS accounts by ensuring real time compliance to security policies (like encryption and access requirements), tag policies, and cost management via garbage collection of unused resources and off-hours resource management.
 * [cloud-nuke](https://github.com/gruntwork-io/cloud-nuke) - A tool for cleaning up an AWS account by nuking (deleting) all resources within it.
+* [cloudformation-plus](https://github.com/HewlettPackard/cloudformation-plus/) - Python library that adds features to AWS CloudFormation that reduce the amount of code you must write in order to automate the deployment of non-trivial cloud-based systems. Specifically, this library adds elements to the CloudFormation template language that perform tasks that otherwise would need to be done in your deploy script.
 * [copy-encrypted-ami](https://github.com/aws-samples/copy-encrypted-ami) - Automate copying encrypted AMIs across accounts and regions.
 * [cw](https://github.com/lucagrulla/cw) - Tail AWS Cloudwatch Logs so you can `grep` them.
 * [delete-bucket](https://github.com/tantona/delete-bucket) - CLI tool for deleting versioned AWS S3 Buckets.
