@@ -6,6 +6,7 @@
 [![Build Status](https://travis-ci.org/unixorn/bigriver-tools.png)](https://travis-ci.org/unixorn/bigriver-tools)
 [![Code Climate](https://codeclimate.com/github/unixorn/bigriver-tools/badges/gpa.svg)](https://codeclimate.com/github/unixorn/bigriver-tools)
 [![Issue Count](https://codeclimate.com/github/unixorn/bigriver-tools/badges/issue_count.svg)](https://codeclimate.com/github/unixorn/bigriver-tools)
+[![GitHub last commit (branch)](https://img.shields.io/github/last-commit/unixorn/bigriver-tools/master.svg)](https://github.com/unixorn/bigriver-tools)
 
 bigriver tools is a collection of helper scripts for dealing with AWS. We all end up writing them, then re-writing them at the next job because they were in a corporate repo instead of open source. I hate rewriting things if I can avoid it, so here's a place to park your AWS helper scripts.
 
