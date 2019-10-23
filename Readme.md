@@ -14,7 +14,7 @@ It's packaged as a ZSH plugin to make it easier to use with plugin managers. If 
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**
+## Table of Contents
 
 - [Included Scripts](#included-scripts)
 - [Usage](#usage)
