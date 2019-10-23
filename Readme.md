@@ -85,7 +85,8 @@ Inspired by how `git` runs helper tools, bigriver-tools includes a driver script
 * [let-me-in](https://github.com/rlister/let-me-in) - Add your IP to an AWS security group so you can ssh to instances.
 * [miam](https://github.com/codenize-tools/miam) - Miam is a tool to manage IAM using a DSL instead of JSON.
 * [s3nukem](https://github.com/lathanh/s3nukem) - A single-file Ruby script to delete Amazon S3 an bucket with many objects (millions) quickly by using multiple threads to retrieve and delete the individual objects.
-* [s3tk](https://github.com/ankane/s3tk) - A security toolkit for S3
+* [s3st](https://github.com/lmammino/s3st) - Command line utility that allows you to stream data from multiple S3 objects directly into your terminal.
+* [s3tk](https://github.com/ankane/s3tk) - A security toolkit for S3.
 * [s5cmd](https://github.com/peakgames/s5cmd) - A parallel S3 and local filesystem execution tool.
 * [Scout2](https://github.com/nccgroup/Scout2) - Scout2 is a security tool that lets AWS administrators assess their environment's security posture. Using the AWS API, Scout2 gathers configuration data for manual inspection and highlights high-risk areas automatically. Rather than pouring through dozens of pages on the web, Scout2 supplies a clear view of the attack surface automatically.
 * [sevenseconds](https://github.com/zalando-stups/sevenseconds) - A command line utility for configuring AWS accounts.
