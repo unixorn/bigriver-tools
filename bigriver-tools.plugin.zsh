@@ -1,4 +1,4 @@
-# Copyright 2016 Joseph Block <jpb@apesseekingknowledge.net>
+# Copyright 2016-2020 Joseph Block <jpb@apesseekingknowledge.net>
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# All of this stuff is OSX-specific, so if we're not on Darwin, bail out
+# All of this stuff is macOS-specific, so if we're not on Darwin, bail out
 # gracefully.
 #
 # This makes it easier to use the same plugin list on both Linux and OS X
